@@ -3,25 +3,11 @@
 			Verificar se a soma dos compassos e 1
 */
 
-#include <algorithm>
-#include <bitset>
-#include <climits>
-#include <cmath>
-#include <deque>
-#include <iostream>
-#include <list>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <string>
-#include <tr1/unordered_map>
-#include <vector>
+#include <bits/stdc++.h>
 #define mp make_pair
 #define pb push_back
 
 using namespace std;
-using namespace tr1;
 
 typedef pair<int, char> ic;
 typedef pair<int, ic> iic;
