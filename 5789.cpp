@@ -13,23 +13,28 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     ios::sync_with_stdio(false);
     int s, b, l, r;
-    for ( cin >> s >> b; s != 0 && b != 0; cin >> s >> b ){
-        int dirsold[s+2], esqsold[s+2];
-        for ( int i = 1; i < s+2; ++i ){
-            dirsold[i] = i+1;
-            esqsold[i] = i-1;
+    for (cin >> s >> b; s != 0 && b != 0; cin >> s >> b) {
+        int dirsold[s + 2], esqsold[s + 2];
+        for (int i = 1; i < s + 2; ++i) {
+            dirsold[i] = i + 1;
+            esqsold[i] = i - 1;
         }
-        for ( int i = 0; i < b; ++i ){
+        for (int i = 0; i < b; ++i) {
             cin >> l >> r;
             dirsold[esqsold[l]] = dirsold[r];
             esqsold[dirsold[r]] = esqsold[l];
-            if ( esqsold[dirsold[r]] < 1 ) cout << "* ";
-            else cout << esqsold[dirsold[r]] << " ";
-            if ( dirsold[esqsold[l]] > s ) cout << "*\n";
-            else cout << dirsold[esqsold[l]] << "\n";
+            if (esqsold[dirsold[r]] < 1)
+                cout << "* ";
+            else
+                cout << esqsold[dirsold[r]] << " ";
+            if (dirsold[esqsold[l]] > s)
+                cout << "*\n";
+            else
+                cout << dirsold[esqsold[l]] << "\n";
         }
         cout << "-\n";
     }
